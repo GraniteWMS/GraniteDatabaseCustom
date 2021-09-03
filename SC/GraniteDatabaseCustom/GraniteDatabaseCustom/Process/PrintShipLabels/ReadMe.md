@@ -1,3 +1,5 @@
+https://lucid.app/lucidchart/6fd5e560-9269-4d93-9cf8-49fcbd518a02/edit
+
 # Process Print ship label 
 
 This process will ask the user to scan Document (Picking) and enter qty.
