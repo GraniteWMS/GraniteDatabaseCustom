@@ -60,7 +60,8 @@
     <Folder Include="Process" />
     <Folder Include="Process\PrintShipLabels" />
     <Folder Include="Process\PrintShipLabels\Scripts" />
-    <Folder Include="Process\PrintShipLabels_alt" />
+    <Folder Include="Process\AssignPickerProcess" />
+    <Folder Include="Process\AssignPickerProcess\Scripts" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="..\..\..\Lib\GraniteDatabase.dacpac">
@@ -68,11 +69,29 @@
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
       <DatabaseSqlCmdVariable>GraniteDatabase</DatabaseSqlCmdVariable>
     </ArtifactReference>
+    <ArtifactReference Include="..\..\..\Lib\AccpacDatabase.dacpac">
+      <HintPath>..\..\..\Lib\AccpacDatabase.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>AccpacDatabase</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="..\..\..\Lib\PastelEVODatabase.dacpac">
+      <HintPath>..\..\..\Lib\PastelEVODatabase.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>PastelEVODatabase</DatabaseSqlCmdVariable>
+    </ArtifactReference>
   </ItemGroup>
   <ItemGroup>
+    <SqlCmdVariable Include="AccpacDatabase">
+      <DefaultValue>AccpacDatabase</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
     <SqlCmdVariable Include="GraniteDatabase">
       <DefaultValue>GraniteDatabase</DefaultValue>
       <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="PastelEVODatabase">
+      <DefaultValue>PastelEVODatabase</DefaultValue>
+      <Value>$(SqlCmdVar__3)</Value>
     </SqlCmdVariable>
   </ItemGroup>
   <ItemGroup>
@@ -92,12 +111,14 @@
     <None Include="Process\PrintShipLabels\Scripts\Label_ShipLabel.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Process\PrintShipLabels_alt\ReadMe.md" />
+    <None Include="Process\AssignPickerProcess\Scripts\ProcessSteps.sql" />
+    <None Include="Process\AssignPickerProcess\Create.sql" />
+    <None Include="Process\AssignPickerProcess\Scripts\Custom_AllocatePickerDocument.sql" />
+    <None Include="Process\AssignPickerProcess\Scripts\Custom_AllocatePickerDocument_View.sql" />
+    <None Include="Process\AssignPickerProcess\Scripts\PrescriptAllocatePickerPicker.sql" />
+    <None Include="Process\AssignPickerProcess\Scripts\PrescriptAllocatePickerLoad.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Process\PrintShipLabels\ReadMe.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Build Include="Process\PrintShipLabels_alt\CreateShipLabelProcess.sql" />
   </ItemGroup>
 </Project>

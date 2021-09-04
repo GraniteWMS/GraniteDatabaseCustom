@@ -18,7 +18,7 @@ DECLARE @StepInput varchar(MAX) = (SELECT Value FROM @input WHERE Name = 'StepIn
 DECLARE @User varchar(50) = (SELECT Value FROM @input WHERE Name = 'User')
 DECLARE @Printer varchar(50) = (Select Value From @input WHERE Name = 'PrintName')
 
-DECLARE @Document varchar(30) = (SELECT  UPPER(Value) FROM @input WHERE Name = 'StepInput')
+DECLARE @Document varchar(30) = (SELECT UPPER(Value) FROM @input WHERE Name = 'StepInput')
 DECLARE @Document_id BIGINT
 DECLARE @CaseCount Decimal(19,4), @TotalOrderCaseCount Decimal(19,4)
 

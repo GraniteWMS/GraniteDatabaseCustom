@@ -1,5 +1,5 @@
-:setvar GraniteDatabase "GraniteDatabase"
-:setvar ERPDatabaseName "EVO"
+:setvar GraniteDatabase "Granite"
+:setvar PastelEVODatabase "EVO"
 :setvar PATH "C:\GraniteInstalls\GraniteDatabaseCustom"
 
 USE [$(GraniteDatabase)]
