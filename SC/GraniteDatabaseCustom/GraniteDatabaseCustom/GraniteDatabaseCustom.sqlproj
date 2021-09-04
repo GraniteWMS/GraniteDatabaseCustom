@@ -62,6 +62,18 @@
     <Folder Include="Process\PrintShipLabels\Scripts" />
     <Folder Include="Process\AssignPickerProcess" />
     <Folder Include="Process\AssignPickerProcess\Scripts" />
+    <Folder Include="Prescripts" />
+    <Folder Include="Prescripts\Picking" />
+    <Folder Include="Prescripts\Picking\UpdatePickRecommendation" />
+    <Folder Include="Prescripts\Move" />
+    <Folder Include="Prescripts\Move\DisplayTrackingEntities" />
+    <Folder Include="Prescripts\Accpac" />
+    <Folder Include="Prescripts\Accpac\AccpacOrderCheck" />
+    <Folder Include="Prescripts\Accpac\AccpacAdjustment" />
+    <Folder Include="Prescripts\Accpac\AccpacOrderCheck\Scripts" />
+    <Folder Include="Prescripts\Receiving" />
+    <Folder Include="Prescripts\Receiving\PutAwayLocation" />
+    <Folder Include="Prescripts\Receiving\PutAwayLocation\Scripts" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="..\..\..\Lib\GraniteDatabase.dacpac">
@@ -111,14 +123,49 @@
     <None Include="Process\PrintShipLabels\Scripts\Label_ShipLabel.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Process\AssignPickerProcess\Scripts\ProcessSteps.sql" />
-    <None Include="Process\AssignPickerProcess\Create.sql" />
-    <None Include="Process\AssignPickerProcess\Scripts\Custom_AllocatePickerDocument.sql" />
-    <None Include="Process\AssignPickerProcess\Scripts\Custom_AllocatePickerDocument_View.sql" />
-    <None Include="Process\AssignPickerProcess\Scripts\PrescriptAllocatePickerPicker.sql" />
-    <None Include="Process\AssignPickerProcess\Scripts\PrescriptAllocatePickerLoad.sql" />
+    <None Include="Process\AssignPickerProcess\Scripts\ProcessSteps.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Process\AssignPickerProcess\Create.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Process\AssignPickerProcess\Scripts\Custom_AllocatePickerDocument.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Process\AssignPickerProcess\Scripts\Custom_AllocatePickerDocument_View.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Process\AssignPickerProcess\Scripts\PrescriptAllocatePickerPicker.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Process\AssignPickerProcess\Scripts\PrescriptAllocatePickerLoad.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Process\AssignPickerProcess\Scripts\PrescriptAllocatePickerDocument.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Process\AssignPickerProcess\ReadMe.md" />
+    <None Include="Prescripts\Picking\UpdatePickRecommendation\ReadMe.md" />
+    <None Include="Prescripts\Move\DisplayTrackingEntities\Create.sql" />
+    <None Include="Prescripts\Move\DisplayTrackingEntities\ReadMe.md" />
+    <None Include="Prescripts\Accpac\AccpacOrderCheck\Create.sql" />
+    <None Include="Prescripts\Accpac\AccpacOrderCheck\ReadMe.md" />
+    <None Include="Prescripts\Accpac\AccpacAdjustment\ReadMe.md" />
+    <None Include="Prescripts\Accpac\AccpacOrderCheck\Scripts\PrescriptOrderCheckNumberOfLabels.sql" />
+    <None Include="Prescripts\Accpac\AccpacOrderCheck\Scripts\PreScriptOrderCheckDocumentDisplayAccpacStatus.sql" />
+    <None Include="Prescripts\Accpac\AccpacOrderCheck\Scripts\PreScriptOrderCheckDisplayShipLabelInstruction.sql" />
+    <None Include="Prescripts\Receiving\PutAwayLocation\Create.sql" />
+    <None Include="Prescripts\Receiving\PutAwayLocation\ReadMe.md" />
+    <None Include="Prescripts\Receiving\PutAwayLocation\Scripts\FN_GetPutawayLocation.sql" />
+    <None Include="Prescripts\Receiving\PutAwayLocation\Scripts\PRESCRIPT_RECEIVING_MASTERITEM.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Process\PrintShipLabels\ReadMe.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Prescripts\Picking\UpdatePickRecommendation\Create.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Prescripts\Accpac\AccpacAdjustment\Create.sql" />
   </ItemGroup>
 </Project>

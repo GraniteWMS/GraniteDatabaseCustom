@@ -6,4 +6,6 @@
 ) ON [PRIMARY]
 
 GO
+
 PRINT '############### Table [Custom_AllocatePickerDocument] Done ###################'
+GO

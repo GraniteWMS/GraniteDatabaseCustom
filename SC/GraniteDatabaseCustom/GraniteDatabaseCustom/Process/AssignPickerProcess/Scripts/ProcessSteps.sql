@@ -9,3 +9,4 @@ VALUES  ('PICKER' ,'Add Picker' ,1 ,1 ,1 ,NULL ,2 ,'ALLOCATEPICKER' ,'PrescriptA
 GO
 
 PRINT '############### Process and Steps Done ###################'
+GO

@@ -8,3 +8,4 @@ ORDER BY D .Number, C.Picker ASC OFFSET 0 ROWS
 
 GO
 PRINT '############### View Custom_AllocatePickerDocument_View Done ###################'
+GO
