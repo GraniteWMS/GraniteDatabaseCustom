@@ -11,12 +11,10 @@ SET NOCOUNT ON;
 
 DECLARE @valid bit
 DECLARE @message varchar(MAX)
-DECLARE @stepInput varchar(MAX) 
-	SELECT @stepInput = UPPER(Value) FROM @input WHERE Name = 'StepInput' 
-DECLARE @User varchar(30)
-	SELECT @User = VALUE FROM @input WHERE NAME = 'User'
-DECLARE @Document varchar(50)
-	SELECT @Document = VALUE FROM @input WHERE Name = 'Document'
+DECLARE @stepInput varchar(MAX) = (UPPER(Value) FROM @input WHERE Name = 'StepInput') 
+DECLARE @User varchar(30) = (SELECT VALUE FROM @input WHERE NAME = 'User')
+	
+DECLARE @Document varchar(50) =	(SELECT VALUE FROM @input WHERE Name = 'Document')
 DECLARE @Printer varchar(20)
 	SELECT @Printer = UPPER(Value) FROM @input WHERE Name = 'PrinterName' 
 	IF ISNULL(@Printer,'') = '' SET @Printer = 'Z2'
