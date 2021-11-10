@@ -1,9 +1,8 @@
-﻿:setvar GraniteDatabase "Granite"
-:setvar PATH "C:\GraniteInstalls\GraniteDatabaseCustom"
+﻿:setvar root "\Prescripts\Accpac\AccpacOrderCheck\Scripts"
 
 USE [$(GraniteDatabase)]
 GO
 
-:r $(path)\Scripts\PrescriptOrderCheckNumberOfLabels.sql
-:r $(path)\Scripts\PreScriptOrderCheckDocumentDisplayAccpacStatus.sql
-:r $(path)\Scripts\PreScriptOrderCheckDisplayShipLabelInstruction.sql
+:r $(path)$(root)\PrescriptOrderCheckNumberOfLabels.sql
+:r $(path)$(root)\PreScriptOrderCheckDocumentDisplayAccpacStatus.sql
+:r $(path)$(root)\PreScriptOrderCheckDisplayShipLabelInstruction.sql

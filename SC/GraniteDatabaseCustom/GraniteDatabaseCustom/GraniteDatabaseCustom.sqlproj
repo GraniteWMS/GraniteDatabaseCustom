@@ -74,6 +74,9 @@
     <Folder Include="Prescripts\Receiving" />
     <Folder Include="Prescripts\Receiving\PutAwayLocation" />
     <Folder Include="Prescripts\Receiving\PutAwayLocation\Scripts" />
+    <Folder Include="Common" />
+    <Folder Include="Common\SqlToHtml" />
+    <Folder Include="Prescripts\Accpac\AccpacAdjustment\Scripts" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="..\..\..\Lib\GraniteDatabase.dacpac">
@@ -154,10 +157,26 @@
     <None Include="Prescripts\Accpac\AccpacOrderCheck\Scripts\PrescriptOrderCheckNumberOfLabels.sql" />
     <None Include="Prescripts\Accpac\AccpacOrderCheck\Scripts\PreScriptOrderCheckDocumentDisplayAccpacStatus.sql" />
     <None Include="Prescripts\Accpac\AccpacOrderCheck\Scripts\PreScriptOrderCheckDisplayShipLabelInstruction.sql" />
-    <None Include="Prescripts\Receiving\PutAwayLocation\Create.sql" />
+    <None Include="Prescripts\Receiving\PutAwayLocation\Create.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Prescripts\Receiving\PutAwayLocation\ReadMe.md" />
-    <None Include="Prescripts\Receiving\PutAwayLocation\Scripts\FN_GetPutawayLocation.sql" />
-    <None Include="Prescripts\Receiving\PutAwayLocation\Scripts\PRESCRIPT_RECEIVING_MASTERITEM.sql" />
+    <None Include="Prescripts\Receiving\PutAwayLocation\Scripts\FN_GetPutawayLocation.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Prescripts\Receiving\PutAwayLocation\Scripts\PRESCRIPT_RECEIVING_MASTERITEM.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Common\SqlToHtml\Create.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Common\SqlToHtml\ReadMe.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Prescripts\Create.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Prescripts\Accpac\AccpacAdjustment\Scripts\PreScriptAdjustmentSilentStep_UpdateAccpacJournal.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Process\PrintShipLabels\ReadMe.md" />
@@ -167,5 +186,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Prescripts\Accpac\AccpacAdjustment\Create.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\Create.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
