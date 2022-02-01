@@ -82,6 +82,7 @@
     <Folder Include="Prescripts\Accpac\AccpacDocumentSync" />
     <Folder Include="Process\PalletStockTake" />
     <Folder Include="Process\PalletStockTake\Scripts" />
+    <Folder Include="Common\SqlHttp" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="..\..\..\Lib\GraniteDatabase.dacpac">
@@ -173,6 +174,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Process\PalletStockTake\Scripts\Custom_Pallet_Counted.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Common\SqlHttp\HTTP_POST_JSON.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Common\SqlHttp\HTTP_PUT_JSON.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Common\SqlHttp\HTTP_GET_JSON.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Common\SqlHttp\HTTP_POST.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
