@@ -10,10 +10,12 @@
 
 :setvar GraniteDatabase "Granite"
 :setvar PastelEVODatabase "EVO"
+:setvar AccpacDatabase "ACCDAT"
 :setvar PATH "C:\GraniteInstalls\GraniteDatabaseCustom"
 
 USE [$(GraniteDatabase)]
 GO
+
 
 -- MOVE       DisplayTrackingEntities
 -- :r $(path)\Prescripts\Move\DisplayTrackingEntities\Create.sql
@@ -23,3 +25,14 @@ GO
 
 -- RECEIVING  PutAwayLocation
 -- :r $(path)\Prescripts\Receiving\PutAwayLocation\Create.sql
+
+
+--    _    ____ ____ ____   _    ____ 
+--   / \  / ___/ ___|  _ \ / \  / ___|
+--  / _ \| |  | |   | |_) / _ \| |    
+-- / ___ \ |__| |___|  __/ ___ \ |___ 
+--/_/   \_\____\____|_| /_/   \_\____|
+                                     
+
+-- ADJUSTMENT UpdateAccpacJournal (SilentStep)
+-- :r $(path)\Prescripts\Accpac\AccpacAdjustment\Create.sql

@@ -1,4 +1,4 @@
-:setvar root "\Process\PrintShipLabels\Scripts"
+:setvar root "\Process\PastelEvo\PrintShipLabels\Scripts"
 
 USE [$(GraniteDatabase)]
 GO

@@ -1,4 +1,4 @@
-﻿:setvar root "\Prescripts\Accpac\AccpacOrderCheck\Scripts"
+﻿:setvar root "\Process\Accpac\AccpacOrderCheck\Scripts"
 
 USE [$(GraniteDatabase)]
 GO

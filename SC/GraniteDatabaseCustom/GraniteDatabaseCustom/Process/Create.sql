@@ -14,8 +14,24 @@
 USE [$(GraniteDatabase)]
 GO
 
--- AssignPickerProcess
+-- AssignPickerProcess (Print Ship label)
 -- :r $(path)\Process\AssignPickerProcess\Create.sql
 
--- PrintShipLabels
--- :r $(path)\Process\PrintShipLabels\Create.sql
+-- ____           _       _   _______     _____  
+--|  _ \ __ _ ___| |_ ___| | | ____\ \   / / _ \ 
+--| |_) / _` / __| __/ _ \ | |  _|  \ \ / / | | |
+--|  __/ (_| \__ \ ||  __/ | | |___  \ V /| |_| |
+--|_|   \__,_|___/\__\___|_| |_____|  \_/  \___/ 
+                                                
+
+-- PrintShipLabels 
+-- :r $(path)\PastelEvo\Process\PrintShipLabels\Create.sql
+
+--    _    ____ ____ ____   _    ____ 
+--   / \  / ___/ ___|  _ \ / \  / ___|
+--  / _ \| |  | |   | |_) / _ \| |    
+-- / ___ \ |__| |___|  __/ ___ \ |___ 
+--/_/   \_\____\____|_| /_/   \_\____|
+
+-- AccpacOrderCheck
+-- :r $(path)\Process\Accpac\PrintShipLabels\Create.sql

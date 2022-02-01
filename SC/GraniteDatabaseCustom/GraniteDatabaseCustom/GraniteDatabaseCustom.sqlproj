@@ -58,8 +58,6 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Process" />
-    <Folder Include="Process\PrintShipLabels" />
-    <Folder Include="Process\PrintShipLabels\Scripts" />
     <Folder Include="Process\AssignPickerProcess" />
     <Folder Include="Process\AssignPickerProcess\Scripts" />
     <Folder Include="Prescripts" />
@@ -68,15 +66,20 @@
     <Folder Include="Prescripts\Move" />
     <Folder Include="Prescripts\Move\DisplayTrackingEntities" />
     <Folder Include="Prescripts\Accpac" />
-    <Folder Include="Prescripts\Accpac\AccpacOrderCheck" />
     <Folder Include="Prescripts\Accpac\AccpacAdjustment" />
-    <Folder Include="Prescripts\Accpac\AccpacOrderCheck\Scripts" />
     <Folder Include="Prescripts\Receiving" />
     <Folder Include="Prescripts\Receiving\PutAwayLocation" />
     <Folder Include="Prescripts\Receiving\PutAwayLocation\Scripts" />
     <Folder Include="Common" />
     <Folder Include="Common\SqlToHtml" />
     <Folder Include="Prescripts\Accpac\AccpacAdjustment\Scripts" />
+    <Folder Include="Process\PastelEvo" />
+    <Folder Include="Process\PastelEvo\PrintShipLabels" />
+    <Folder Include="Process\PastelEvo\PrintShipLabels\Scripts" />
+    <Folder Include="Process\Accpac" />
+    <Folder Include="Process\Accpac\AccpacOrderCheck" />
+    <Folder Include="Process\Accpac\AccpacOrderCheck\Scripts" />
+    <Folder Include="Prescripts\Accpac\AccpacDocumentSync" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="..\..\..\Lib\GraniteDatabase.dacpac">
@@ -110,22 +113,6 @@
     </SqlCmdVariable>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Process\PrintShipLabels\Create.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Process\PrintShipLabels\Scripts\ProcessSteps.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Process\PrintShipLabels\Scripts\PrescriptPrintShipLabelsQty.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="ScriptInputParameters.sql" />
-    <None Include="Process\PrintShipLabels\Scripts\PrescriptPrintShipLabelsDocument.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Process\PrintShipLabels\Scripts\Label_ShipLabel.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Process\AssignPickerProcess\Scripts\ProcessSteps.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -151,12 +138,7 @@
     <None Include="Prescripts\Picking\UpdatePickRecommendation\ReadMe.md" />
     <None Include="Prescripts\Move\DisplayTrackingEntities\Create.sql" />
     <None Include="Prescripts\Move\DisplayTrackingEntities\ReadMe.md" />
-    <None Include="Prescripts\Accpac\AccpacOrderCheck\Create.sql" />
-    <None Include="Prescripts\Accpac\AccpacOrderCheck\ReadMe.md" />
     <None Include="Prescripts\Accpac\AccpacAdjustment\ReadMe.md" />
-    <None Include="Prescripts\Accpac\AccpacOrderCheck\Scripts\PrescriptOrderCheckNumberOfLabels.sql" />
-    <None Include="Prescripts\Accpac\AccpacOrderCheck\Scripts\PreScriptOrderCheckDocumentDisplayAccpacStatus.sql" />
-    <None Include="Prescripts\Accpac\AccpacOrderCheck\Scripts\PreScriptOrderCheckDisplayShipLabelInstruction.sql" />
     <None Include="Prescripts\Receiving\PutAwayLocation\Create.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -177,9 +159,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Prescripts\Accpac\AccpacAdjustment\Scripts\PreScriptAdjustmentSilentStep_UpdateAccpacJournal.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Process\PrintShipLabels\ReadMe.md" />
+    <None Include="Process\PastelEvo\PrintShipLabels\ReadMe.md" />
+    <None Include="Process\Accpac\AccpacOrderCheck\ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Prescripts\Picking\UpdatePickRecommendation\Create.sql" />
@@ -191,5 +172,35 @@
     <None Include="Process\Create.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\PastelEvo\PrintShipLabels\Scripts\Label_ShipLabel.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\PastelEvo\PrintShipLabels\Scripts\PrescriptPrintShipLabelsDocument.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\PastelEvo\PrintShipLabels\Scripts\PrescriptPrintShipLabelsQty.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\PastelEvo\PrintShipLabels\Scripts\ProcessSteps.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\PastelEvo\PrintShipLabels\Create.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\Accpac\AccpacOrderCheck\Scripts\PreScriptOrderCheckDisplayShipLabelInstruction.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\Accpac\AccpacOrderCheck\Scripts\PreScriptOrderCheckDocumentDisplayAccpacStatus.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\Accpac\AccpacOrderCheck\Scripts\PrescriptOrderCheckNumberOfLabels.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\Accpac\AccpacOrderCheck\Create.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Common\ScriptInputParameters.sql" />
   </ItemGroup>
 </Project>
