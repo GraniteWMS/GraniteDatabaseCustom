@@ -80,6 +80,8 @@
     <Folder Include="Process\Accpac\AccpacOrderCheck" />
     <Folder Include="Process\Accpac\AccpacOrderCheck\Scripts" />
     <Folder Include="Prescripts\Accpac\AccpacDocumentSync" />
+    <Folder Include="Process\PalletStockTake" />
+    <Folder Include="Process\PalletStockTake\Scripts" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="..\..\..\Lib\GraniteDatabase.dacpac">
@@ -161,6 +163,18 @@
     <None Include="Prescripts\Accpac\AccpacAdjustment\Scripts\PreScriptAdjustmentSilentStep_UpdateAccpacJournal.sql" />
     <None Include="Process\PastelEvo\PrintShipLabels\ReadMe.md" />
     <None Include="Process\Accpac\AccpacOrderCheck\ReadMe.md" />
+    <None Include="Process\PalletStockTake\ReadMe.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Process\PalletStockTake\Scripts\PrescriptPalletStockTakePalletConfirmation.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Process\PalletStockTake\Scripts\PrescriptPalletStockTakeTrackingEntity.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Process\PalletStockTake\Scripts\Custom_Pallet_Counted.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Prescripts\Picking\UpdatePickRecommendation\Create.sql" />
@@ -202,5 +216,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Common\ScriptInputParameters.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\PalletStockTake\Scripts\ProcessSteps.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Process\PalletStockTake\Create.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
