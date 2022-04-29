@@ -6,7 +6,7 @@
 USE [$(GraniteDatabase)]
 GO
 
--- requirement SqlToHtmlPath
+-- requirement Granite Mail account and SqlToHtmlPath
 :r $(path)\Common\Mail\Account.sql
 :r $(path)\Common\SqlToHtml\Create.sql
 
