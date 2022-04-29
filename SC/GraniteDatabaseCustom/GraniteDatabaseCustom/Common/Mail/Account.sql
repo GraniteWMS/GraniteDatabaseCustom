@@ -1,5 +1,4 @@
-﻿
-sp_configure 'show advanced options', 1;  
+﻿sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
 GO  
@@ -52,3 +51,4 @@ GO
 sp_configure 'show advanced options', 0;  
 GO  
 RECONFIGURE;  
+GO
