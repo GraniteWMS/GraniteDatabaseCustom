@@ -83,6 +83,8 @@
     <Folder Include="Process\PalletStockTake" />
     <Folder Include="Process\PalletStockTake\Scripts" />
     <Folder Include="Common\SqlHttp" />
+    <Folder Include="Common\Mail" />
+    <Folder Include="Common\Mail\StoredProcedure" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="..\..\..\Lib\GraniteDatabase.dacpac">
@@ -99,6 +101,16 @@
       <HintPath>..\..\..\Lib\PastelEVODatabase.dacpac</HintPath>
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
       <DatabaseSqlCmdVariable>PastelEVODatabase</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\110\SqlSchemas\msdb.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\110\SqlSchemas\msdb.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\110\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\110\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
     </ArtifactReference>
   </ItemGroup>
   <ItemGroup>
@@ -152,9 +164,9 @@
     <None Include="Prescripts\Receiving\PutAwayLocation\Scripts\PRESCRIPT_RECEIVING_MASTERITEM.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Common\SqlToHtml\Create.sql">
+    <Build Include="Common\SqlToHtml\Create.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Build>
     <None Include="Common\SqlToHtml\ReadMe.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -239,5 +251,19 @@
     <None Include="Process\PalletStockTake\Create.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Common\Mail\StoredProcedure\Mail_TransactionsTransfer.sql" />
+    <Build Include="Common\Mail\StoredProcedure\Mail_JOBCompanyDailyProduction.sql" />
+    <None Include="Common\Mail\Create.sql" />
+    <None Include="Common\Mail\Account.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Common\Mail\StoredProcedure\Mail_MOProgress.sql" />
+    <Build Include="Common\Mail\StoredProcedure\Mail_TransactionsPicked.sql" />
+    <Build Include="Common\Mail\StoredProcedure\Mail_TransactionsReceiving.sql" />
+    <Build Include="Common\Mail\StoredProcedure\Mail_TransactionsReceivingReceipt.sql" />
   </ItemGroup>
 </Project>
