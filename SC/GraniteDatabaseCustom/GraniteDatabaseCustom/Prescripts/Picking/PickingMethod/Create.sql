@@ -26,7 +26,7 @@ DELETE FROM ProcessStepLookupDynamic WHERE UserName = @User
 --Clear any selection list so that the User enters or scans the Document
 IF (@StepInput = 'ENTERDOC') 
 BEGIN
---Clear the ProcessStepLookupTable for the user so that the Document prompt is entered.
+--Clear the ProcessStepLookupDynamic table for the user so that the Document prompt is entered.
 	SELECT @Document = ''
 	DELETE FROM ProcessStepLookupDynamic WHERE UserName = @User
 	SELECT @message = ''
@@ -45,7 +45,7 @@ BEGIN
 
 END
 
---Populate the ProcessStepLookup with a list of Released documents to select from.  Exclude Documents that are busy being picked (Transaction in last 15minutes)
+--Populate the ProcessStepLookupDynamic with a list of Released documents to select from.  Exclude Documents that are busy being picked (Transaction in last 15minutes)
 IF (@StepInput = 'SELECTDOC') 
 BEGIN
 	SELECT @Document = ''
@@ -65,6 +65,8 @@ BEGIN
 	SELECT @message = ''
 	SELECT @valid = 1
 END
+
+--Populate the ProcessStepLookupDynamic with a list of Released documents allocated to the User.
 IF (@StepInput = 'ASSIGNEDDOC')
 BEGIN
 	SELECT @Document = ''
