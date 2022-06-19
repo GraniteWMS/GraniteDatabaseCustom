@@ -1,11 +1,11 @@
-﻿:setvar root "\Process\AssignPickerProcess\Scripts"
+﻿:setvar root "\Process\DeliveryNotification\Scripts"
 
 USE [$(GraniteDatabase)]
 GO
 
-:r $(path)$(root)\Custom_AllocatePickerDocument.sql
-:r $(path)$(root)\Custom_AllocatePickerDocument_View.sql
 :r $(path)$(root)\ProcessSteps.sql
-:r $(path)$(root)\PrescriptAllocatePickerPicker.sql
-:r $(path)$(root)\PrescriptAllocatePickerLoad.sql
-:r $(path)$(root)\PrescriptAllocatePickerDocument.sql
+:r $(path)$(root)\PrescriptDeliveryNotifyLocation.sql
+:r $(path)$(root)\PrescriptDeliveryNotifyDocument.sql
+:r $(path)$(root)\PrescriptDeliveryNotifyReference.sql
+:r $(path)$(root)\PrescriptDeliveryNotifyConfirmation.sql
+:r $(path)$(root)\PrescriptDeliveryNotifyStep200.sql

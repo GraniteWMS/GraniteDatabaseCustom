@@ -1,6 +1,5 @@
 
-
-/****** Object:  StoredProcedure [dbo].[PrescriptDeliveryNotifyLocation]    Script Date: 6/18/2022 4:26:30 PM ******/
+/****** Object:  StoredProcedure [dbo].[PrescriptDeliveryNotifyHACCPLocation]    Script Date: 6/19/2022 7:19:31 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -8,7 +7,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 
-CREATE PROCEDURE  [dbo].[PrescriptDeliveryNotifyLocation] (
+CREATE PROCEDURE  [dbo].[PrescriptDeliveryNotifyHACCPLocation] (
    @input dbo.ScriptInputParameters READONLY
 )
 AS

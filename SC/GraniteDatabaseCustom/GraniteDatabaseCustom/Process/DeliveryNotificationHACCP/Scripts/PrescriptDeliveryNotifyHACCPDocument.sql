@@ -1,6 +1,5 @@
 
-
-/****** Object:  StoredProcedure [dbo].[PrescriptDeliveryNotifyDocument]    Script Date: 6/18/2022 4:27:36 PM ******/
+/****** Object:  StoredProcedure [dbo].[PrescriptDeliveryNotifyHACCPDocument]    Script Date: 6/19/2022 7:22:07 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -9,7 +8,7 @@ GO
 
 
 
-CREATE PROCEDURE  [dbo].[PrescriptDeliveryNotifyDocument] (
+CREATE PROCEDURE  [dbo].[PrescriptDeliveryNotifyHACCPDocument] (
    @input dbo.ScriptInputParameters READONLY
 )
 AS

@@ -1,11 +1,13 @@
 
-/****** Object:  StoredProcedure [dbo].[PrescriptDeliveryNotifyConfirmation]    Script Date: 6/18/2022 3:30:01 PM ******/
+/****** Object:  StoredProcedure [dbo].[PrescriptDeliveryNotifyHACCPReference]    Script Date: 6/19/2022 7:20:10 PM ******/
 SET ANSI_NULLS ON
 GO
+
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE  [dbo].[PrescriptDeliveryNotifyReference] (
+
+CREATE PROCEDURE  [dbo].[PrescriptDeliveryNotifyHACCPReference] (
    @input dbo.ScriptInputParameters READONLY
 )
 AS
@@ -39,3 +41,7 @@ INSERT INTO @Output
 SELECT 'StepInput', @stepInput
 
 SELECT * FROM @Output
+
+GO
+
+

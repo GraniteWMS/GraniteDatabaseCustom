@@ -56,10 +56,13 @@ BEGIN
 
 	--Set the comment for the Transaction
 	SELECT @Comment = CONCAT(@Carrier,'|', @Truck, '|', @Driver,'|',@DeliveryReference)
-	INSERT INTO @Output	SELECT 'Comment', LEFT(@Comment,250)
 	SELECT @DeliveryReference = CONCAT(@DeliveryReference,'|', @Document)
-	INSERT INTO @Output	SELECT 'Reference', LEFT(@DeliveryReference,50)
+	--Write to DocumentTrackingLog
+	INSERT INTO custom_DocumentTrackingLog(Document,Version,TrackingStatus,[User],ActivityDate,Comment,DocumentReference)
+	SELECT @Document,1,'DELIVERY',@User,getdate(),@Comment,@DeliveryReference
 
+	INSERT INTO @Output	SELECT 'Reference', LEFT(@DeliveryReference,50)
+	INSERT INTO @Output	SELECT 'Comment', LEFT(@Comment,250)
 	INSERT INTO @Output	SELECT 'MasterItem', @MasterItemCode
 
 	SELECT @valid = 1
