@@ -19,6 +19,8 @@ SELECT 'CHECKED','OrderStatus' ,'OrderStatusValue'
 INSERT INTO [dbo].[FunctionParameterLookup] ([Value],[FunctionName] ,[ParameterName])
 SELECT 'CHECKED_BO','OrderStatus' ,'OrderStatusValue'
 INSERT INTO [dbo].[FunctionParameterLookup] ([Value],[FunctionName] ,[ParameterName])
+SELECT 'POSTED','OrderStatus' ,'OrderStatusValue'
+INSERT INTO [dbo].[FunctionParameterLookup] ([Value],[FunctionName] ,[ParameterName])
 SELECT 'READYTOLOAD','OrderStatus' ,'OrderStatusValue'
 INSERT INTO [dbo].[FunctionParameterLookup] ([Value],[FunctionName] ,[ParameterName])
 SELECT 'LOADING','OrderStatus' ,'OrderStatusValue'
