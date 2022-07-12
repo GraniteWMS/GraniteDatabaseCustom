@@ -1,5 +1,3 @@
-USE [GraniteDatabaseTest]
-GO
 
 /****** Object:  StoredProcedure [dbo].[Logic_UpdatePickInstruction]    Script Date: 7/10/2022 10:07:54 AM ******/
 SET ANSI_NULLS ON
@@ -21,6 +19,8 @@ DECLARE @PalletQtyOptionalField int = (SELECT ID FROM OptionalFields WHERE Name 
 DECLARE @DocumentID BIGINT = (SELECT ID FROM Document WHERE Number = @Document  and Document.Type IN ('ORDER','PICKSLIP','TRANSFER'))
 
 --In this query I check if there is a full pallet first and if that is NULL then check for any stock and if that is null then return ZZZ No Stock
+--This also excludes REC locations - if picking is allowed from Receiving then comment that out.
+
 	UPDATE DocumentDetail SET Instruction = isnull((SELECT TOP 1  L.Barcode 
 	FROM TrackingEntity TE Inner Join Location L
 	ON TE.Location_id = L.ID LEFT OUTER JOIN OptionalFieldValues_MasterItem Opt 
