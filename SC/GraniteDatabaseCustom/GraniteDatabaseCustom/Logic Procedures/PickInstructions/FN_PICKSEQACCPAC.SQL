@@ -1,5 +1,5 @@
 
-/****** Object:  UserDefinedFunction [dbo].[FN_PICKSEQ]    Script Date: 7/11/2022 9:44:08 AM ******/
+/****** Object:  UserDefinedFunction [dbo].[FN_PICKSEQACCPAC]    Script Date: 7/11/2022 9:44:08 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -7,7 +7,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 
-CREATE FUNCTION [dbo].[FN_PICKSEQ_ACCPAC] (@MasterItem_id varchar(50), @ERPLocation varchar(30)) 
+CREATE FUNCTION [dbo].[FN_PICKSEQACCPAC] (@MasterItem_id varchar(50), @ERPLocation varchar(30)) 
 RETURNS varchar(30) 
 AS 
 BEGIN 
