@@ -21,7 +21,7 @@ SELECT @stepInput = Value FROM @input WHERE Name = 'StepInput'
 IF (SELECT Document.[Status] FROM Document WHERE Number = @stepInput) IN ('ENTERED', 'RELEASED')
 BEGIN
 
-	UPDATE DocumentDetail SET Comment = isnull('Pick from:' + (SELECT TOP 1  L.Barcode + ' - TE:' +  TE.Barcode
+	UPDATE DocumentDetail SET Instruction = isnull('Pick from:' + (SELECT TOP 1  L.Barcode + ' - TE:' +  TE.Barcode
 	FROM TrackingEntity TE Inner Join Location L
 	ON TE.Location_id = L.ID
 	WHERE TE.InStock = 1 AND TE.OnHold = 0 AND TE.Qty > 0 AND TE.MasterItem_id=  DocumentDetail.Item_id AND L.ERPLocation = DocumentDetail.FromLocation 
