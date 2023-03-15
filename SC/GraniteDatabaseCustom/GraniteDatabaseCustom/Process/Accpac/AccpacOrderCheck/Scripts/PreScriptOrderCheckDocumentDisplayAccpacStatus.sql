@@ -37,7 +37,7 @@ SELECT @Document_id = ID FROM Document WHERE Number = @Document
 --todo change ERP database name [ACCPAC]
 SELECT TOP 1
 	@ShiDate = CONVERT(varchar(10),SHIDATE), @Shipment =  SHINUMBER, @LastInvNum = LASTINVNUM
-FROM [ACCPAC].dbo.[OESHIH]
+FROM [$(AccpacDatabase)].dbo.[OESHIH]
 WHERE ORDNUMBER = @Document
 ORDER BY SHIUNIQ DESC
 

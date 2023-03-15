@@ -85,15 +85,6 @@
     <Folder Include="Common\SqlHttp" />
     <Folder Include="Common\Mail" />
     <Folder Include="Common\Mail\StoredProcedure" />
-    <Folder Include="Process\CycleCount" />
-    <Folder Include="WebDesktopFunctions" />
-    <Folder Include="Common\LookupTable" />
-    <Folder Include="BusyWith" />
-    <Folder Include="BusyWith\Process" />
-    <Folder Include="BusyWith\Prescripts" />
-    <Folder Include="BusyWith\Process\CheckingList" />
-    <Folder Include="BusyWith\Process\CheckingList\Scripts" />
-    <Folder Include="Docs" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="..\..\..\Lib\GraniteDatabase.dacpac">
@@ -111,6 +102,11 @@
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
       <DatabaseSqlCmdVariable>PastelEVODatabase</DatabaseSqlCmdVariable>
     </ArtifactReference>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\110\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\110\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
     <ArtifactReference Condition="'$(NetCoreBuild)' == 'true'" Include="$(NETCoreTargetsPath)\SystemDacpacs\110\msdb.dacpac">
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
       <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
@@ -118,14 +114,6 @@
     <ArtifactReference Condition="'$(NetCoreBuild)' != 'true'" Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\110\SqlSchemas\msdb.dacpac">
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
       <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
-    </ArtifactReference>
-    <ArtifactReference Condition="'$(NetCoreBuild)' == 'true'" Include="$(NETCoreTargetsPath)\SystemDacpacs\110\master.dacpac">
-      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
-      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
-    </ArtifactReference>
-    <ArtifactReference Condition="'$(NetCoreBuild)' != 'true'" Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\110\SqlSchemas\master.dacpac">
-      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
-      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
     </ArtifactReference>
   </ItemGroup>
   <ItemGroup>
@@ -215,15 +203,6 @@
     <None Include="Common\SqlHttp\HTTP_POST.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Process\CycleCount\Cycle count requirement.docx" />
-    <None Include="Prescripts\Move\DisplayTrackingEntities\MetaData.json" />
-    <None Include="Prescripts\Receiving\PutAwayLocation\MetaData.json" />
-    <None Include="Prescripts\Picking\UpdatePickRecommendation\MetaData.json" />
-    <None Include="Common\LookupTable\ReadMe.md" />
-    <None Include="BusyWith\Process\CheckingList\Scripts\dbo.Process.data.sql" />
-    <None Include="BusyWith\Process\CheckingList\Scripts\dbo.ProcessStep.data.sql" />
-    <None Include="BusyWith\Process\CheckingList\Scripts\dbo.ProcessStepLookup.data.sql" />
-    <None Include="BusyWith\Process\CheckingList\ReadMe.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Prescripts\Picking\UpdatePickRecommendation\Create.sql" />
@@ -283,16 +262,6 @@
     <None Include="Common\Mail\Account.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Build Include="Process\CycleCount\CycleCountAction.sql" />
-    <Build Include="Process\CycleCount\CycleCountRequirement.sql" />
-    <Build Include="Process\CycleCount\PrescriptCycleCount200.sql" />
-    <Build Include="Common\LookupTable\Create.sql" />
-    <Build Include="BusyWith\Process\CheckingList\Scripts\dbo.PrescriptCheckingStep200.StoredProcedure.sql" />
-    <Build Include="BusyWith\Process\CheckingList\Scripts\dbo.PrescriptChecklistDocument.StoredProcedure.sql" />
-    <Build Include="BusyWith\Process\CheckingList\Scripts\dbo.PrescriptChecklistLocation.StoredProcedure.sql" />
-    <Build Include="BusyWith\Process\CheckingList\Scripts\dbo.PrescriptChecklistMasterItem.StoredProcedure.sql" />
-    <Build Include="BusyWith\Process\CheckingList\Scripts\dbo.PrescriptChecklistQty.StoredProcedure.sql" />
-    <None Include="BusyWith\Process\CheckingList\Create.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Common\Mail\StoredProcedure\Mail_MOProgress.sql" />
